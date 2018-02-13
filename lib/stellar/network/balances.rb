@@ -9,7 +9,7 @@ module Stellar
       def self.from(account_id)
         body = Net::HTTP.get(URI("#{TEST_NETWORK}/accounts/#{account_id}"))
         JSON.parse(body)["balances"].map do |hash|
-          Stellar::Balance.new(hash["balance"], hash["asset_type"])
+          Stellar::Balance.new(hash)
         end
       end
     end
