@@ -18,7 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+# Get a list of your account's balances
+Stellar::Network.balances_for(account_id)
+```
 
 ## Development
 
